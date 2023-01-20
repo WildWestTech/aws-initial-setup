@@ -1,18 +1,19 @@
 # Pre-Reqs
 
-## Phase 1: setting up the root account
-
-- create root email address
-- create dev email address (needed for dev account)
-- create prod email address (needed for prod account)
-- create non-root admin email address (needed for first non-root admin user)
+## Phase 1: Setting up an AWS Account
+- grab your credit card, you'll need it
+- have your email addresses handy:
+  - create root email address (first email you'll use to create your aws account)
+  - create dev email address (needed for dev account)
+  - create prod email address (needed for prod account)
+  - create non-root admin email address (needed for first non-root admin user)
 - create aws account, using root email address
   - note on the account name: 
     - consider appending something like "-root", "-billing", "-mgmt"
     - when we federate our accounts, it will be nice to have this one set aside for billing and maintenance purposes 
 - navigate to security -> setup MFA
   - note on "name your device":
-    - {device-name}@account will show up in your authenticator app
+    - {device-name}@account will show up in your authenticator app (at least it does in mine)
     - for this reason, i use the name of my root email account for ease of navigation within my app
 
 ## Phase 2: AWS Organizations (root, dev, prod)
