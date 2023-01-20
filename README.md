@@ -1,4 +1,4 @@
-# aws-infra
+# Pre-Reqs
 
 ## Phase 1: setting up the root account
 
@@ -16,12 +16,12 @@
 
 ## Phase 2: AWS Organizations (root, dev, prod)
 
- navigate to organization (top-right, main drop-down)
- "create an organization" (one click)
- verify your email
-
- AWS Organizations -> AWS Accounts -> Invitations -> Invite AWS Account
-   I'll choose to Create an AWS Account (once for dev, once for prod, each require their own unique email addresses)
+- navigate to organization (top-right, main drop-down)
+- "create an organization" (one click)
+- verify your email (root email)
+- next, we'll add additional accounts to our org.
+- AWS Organizations -> AWS Accounts -> Invitations -> Invite AWS Account
+  - I'll choose to Create an AWS Account (once for dev, once for prod, each require their own unique email addresses)
 
 ## Phase 3: AWS Identity Center (SSO)
 
