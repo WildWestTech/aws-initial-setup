@@ -4,7 +4,7 @@
   - back our root account with MFA
   - federate our account by adding organizations
   - enable and configure sso
-  - create user, groups, and leverage a pre-defined permission set
+  - create users, groups, and leverage a pre-defined permission set
   - navigate away from using the root account
 - Next, you'll need to install a few tools for working programmatically with AWS (AWS CLI & Terraform)
 - Once your tools are installed and configured, we'll perform a one-time configuration terraform's backend statefile.  Terraform is a programming language used for developing infrastructure as code.  It's similar to tools like cloudformation and python's boto3.  However, because these files contain the state of our infrastructure, they can contain some sensitive information that we don't want exposed in source control.  Additionally, we'd like to lock these files, so multiple developers aren't making changes to the file at once.  Additionally, we'd like these files to be centrally located.  For these reasons, we'll create a few simple resources in AWS to help us achieve this process.
