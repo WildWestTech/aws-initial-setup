@@ -8,11 +8,11 @@
 - create aws account, using root email address
   - note on the account name: 
     - consider appending something like "-root", "-billing", "-mgmt"
-    - when we federate our accounts, it will be nice to have this one set aside for billing and maintenance purposes
- navigate to security -> setup MFA
-   note on "name your device": 
-       {device-name}@account will show up in your authenticator app
-       for this reason, i use the name of my root email account for ease of navigation within my app
+    - when we federate our accounts, it will be nice to have this one set aside for billing and maintenance purposes 
+- navigate to security -> setup MFA
+  - note on "name your device":
+    - {device-name}@account will show up in your authenticator app
+    - for this reason, i use the name of my root email account for ease of navigation within my app
 
 ## Phase 2: AWS Organizations (root, dev, prod)
 
