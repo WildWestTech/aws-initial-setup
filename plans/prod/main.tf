@@ -46,7 +46,7 @@ resource "aws_s3_bucket_versioning" "terraform_state" {
 }
 
 #Encrypt the bucket to be safe
-#But I think AWS recently started encrypting buckets by defaul
+#But I think AWS recently started encrypting buckets by default
 resource "aws_s3_bucket_server_side_encryption_configuration" "terraform_state" {
     bucket = aws_s3_bucket.terraform_state.id
     rule {
