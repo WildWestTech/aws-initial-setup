@@ -1,4 +1,4 @@
-# aws-infra
+# aws-initial-setup
 
 ## AWS Account Setup
 - This is largely GUI/console based
