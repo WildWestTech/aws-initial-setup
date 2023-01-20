@@ -1,5 +1,10 @@
 # Pre-Reqs
 
+- We'll need to do some console work before we get going.  
+- Let's start by setting up an account.  
+- We'll make sure to use MFA
+- Additionally, we'll federate our accounts, leveraging AWS SSO (IAM Identity Center) to segregate our root (billing), dev, and prod environments.
+
 ## Phase 1: Setting up an AWS Account
 - grab your credit card, you'll need it
 - have your email addresses handy:
