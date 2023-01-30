@@ -76,3 +76,15 @@
 - That tile should expand to to show each of the accounts we are now a member of
 - Each of those accounts should now expand to show each of the permission sets we can use to login with
 - For each permission set, we should be able to either access the management console and/or grab the temporary CLI credentials
+
+## Phase 7: Delegation (Optional)
+
+In order to fully manage permissions for your organization, you need to modify permission sets.  This occurs mainly through the IAM Identity Center, which is managed by the root account.  If you choose to delegate this management, you can take the following steps.  However, you can only delegate this administration to one other account at the moment, so you might want to either stick with your root account or create another account, dedicated to management, as opposed to using one of the dev or prod accounts.  In addition to which accounts have been registered as delegated administrators, these accounts would also require permission sets with permissions sufficient to perform IAM management tasks.  If for example an account was assigned two permission sets, AdministratorAccess and DataScientist, even if the account was delegated as an administrator, you could only perform IAM Identity Center tasks when entering through the AdministratorAccess permission set, but not while entering through the DataScientist permission set.
+
+- Navigate to the the AWS-SSO page
+- Using your root account, enter the management console
+- Navigate to the IAM Identity Center
+  - Settings
+  - Management
+  - Delegated administrator
+  - Select an account and register
