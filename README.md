@@ -12,7 +12,7 @@
 
 ## AWS Account Setup
 - This is largely GUI/console based
-- https://github.com/WildWestTech/aws-infra/blob/main/AccountSetup.md
+- https://github.com/WildWestTech/aws-initial-setup/blob/main/AccountSetup.md
 
 ## Install AWS CLI
 - We'll need the AWS command line interface tool for interacting with AWS resources
