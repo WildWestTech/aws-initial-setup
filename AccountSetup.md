@@ -88,3 +88,22 @@ In order to fully manage permissions for your organization, you need to modify p
   - Management
   - Delegated administrator
   - Select an account and register
+
+## Phase 8: Create Additional Permission Sets (Optional)
+
+We are currently focusing on getting things up and running.  However, we won't give everyone full adminstrator access.  I'll dedicate more time and effort to this section later.  I plan on walking through custom in-line policies at some point.  For now, we'll just create a ViewOnlyAccess set.
+
+- Navigate to AWS-SSO
+- Login to the management console as the root user
+- Enter the IAM Identity Center
+- Navigate to Permission Sets
+  - Choose "ViewOnlyAccess" then select next and create
+  - Next, go to Groups and create a group
+    - name it something like "ViewOnlyAccess" or "ViewOnly"
+    - add yourself (or another available user) to the group
+- Now navigate to AWS Accounts (under multi-account permissions)
+  - Select your dev and prod account, then add users or groups
+    - Choose your newly created group
+      - Select the newly created permission set, then next and submit
+
+At this point, you may need to logout and then log back in to your AWS-SSO portal, but then you should now see an additional permission set under your dev and prod accounts.  This is the first step to working with granular permissions.  As mentioned above, I plan on spending more time focusing on the granular permissions that fall somewhere between ViewOnlyAccess and full AdministratorAccess.  But for now, this will give you a good baseline for being able to do just about everything and also spotting what you cannot do.
