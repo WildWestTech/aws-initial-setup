@@ -106,4 +106,15 @@ We are currently focusing on getting things up and running.  However, we won't g
     - Choose your newly created group
       - Select the newly created permission set, then next and submit
 
-At this point, you may need to logout and then log back in to your AWS-SSO portal, but then you should now see an additional permission set under your dev and prod accounts.  This is the first step to working with granular permissions.  As mentioned above, I plan on spending more time focusing on the granular permissions that fall somewhere between ViewOnlyAccess and full AdministratorAccess.  But for now, this will give you a good baseline for being able to do just about everything and also spotting what you cannot do.
+At this point, you may need to logout and then log back in to your AWS-SSO portal, but then you should now see an additional permission set under your dev and prod accounts.  This is the first step to working with granular permissions.  As mentioned above, I plan on spending more time focusing on the granular permissions that fall somewhere between ViewOnlyAccess and full AdministratorAccess.  But for now, this will give you a good baseline for being able to do just about everything and also spotting what you cannot do.lo
+
+## Phase 9: IAM User and Role Access to Billing Information (Optional)
+
+By default, billing and cost management is limited to the root user, via the root email address.  Since our goal is to use SSO and move away from using the root account, you may want to:
+
+- Enter the console via your root eamail address
+- Navigate to the drop-down menu on the top right and choose "Account"
+- Navigate to "IAM User and Role Access to Billing Information"
+- Choose edit and check the box to "Activate IAM Access"
+
+This part may have seemed a bit confusing because your root account will be accessible via SSO.  Additionally, your root account will have elevated permissions in sso by default.  Specifically, your root account will be your management account unless you chose to delegate administration.  However, even if you grant Billing & Cost Management permissions to your account via the Permission Sets or IAM, you still will not be able to access these items via sso until you have activated IAM access.
