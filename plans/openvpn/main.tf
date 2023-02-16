@@ -11,28 +11,27 @@
 #make sure to remove any sensitive terraform state files before pushing to git
 #moving forward, we will reference the backend statefile, so there should be no risk of it being exposed publicly in source control
 
-
 terraform {
     backend "s3" {
-        bucket          = "wildwesttech-terraform-backend-state-dev"
-        key             = "terraform-s3-backend-setup-dev/terraform.tfstate"
+        bucket          = "wildwesttech-terraform-backend-state-openvpn"
+        key             = "terraform-s3-backend-setup-openvpn/terraform.tfstate"
         region          = "us-east-1"
         dynamodb_table  = "terraform-state-locking"
         encrypt         = true
-        profile         = "251863357540_AdministratorAccess"
+        profile         = "785888383526_AdministratorAccess"
     }
 }
 
 
 #dev profile and region
 provider "aws" {
-    profile = "251863357540_AdministratorAccess"
+    profile = "785888383526_AdministratorAccess"
     region  = "us-east-1"
 }
 
 #Where we will store our state files
 resource "aws_s3_bucket" "terraform_state" {
-    bucket = "wildwesttech-terraform-backend-state-dev"
+    bucket = "wildwesttech-terraform-backend-state-openvpn"
     lifecycle {
         prevent_destroy = true
     }
